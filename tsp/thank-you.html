@@ -64,6 +64,7 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
   <h1>Thanks. Your free <span style="background:var(--yellow);padding:0 6px">TSP Retirement Options</span> guide is on the way.</h1>
   <p>Check your email for the guide. If it is not there in a few minutes, check your spam or promotions folder.</p>
   <p><a class="btn" href="guide.pdf" target="_blank" rel="noopener">Open the guide</a></p>
+  <p id="book-wrap" hidden><a id="book-btn" class="btn" href="#" target="_blank" rel="noopener">Book your free 30-min intro call</a></p>
   <h2>What happens next</h2>
   <ol class="steps">
     <li>Read the guide at your own pace. It is educational and plain English.</li>
@@ -81,5 +82,14 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
       <p>No returns, outcomes, or tax results are guaranteed. Money Understood is an education channel. Licensed services, if any, are provided by the licensed professional who contacts you, not by Money Understood.</p>
 </div></section>
 <footer class="bot"><div class="wrap">&copy; Money Understood &middot; Real money. No BS. &middot; <a href="../privacy.html" style="color:#FFD400">Privacy Policy</a> &middot; <a href="../terms.html" style="color:#FFD400">Terms</a></div></footer>
+<script>
+/* BOOKING_URL_PLACEHOLDER: set BOOKING_URL to the real scheduling link (e.g. Calendly) to show the button. Empty = hidden. */
+(function(){
+  var BOOKING_URL=""; // TODO: BOOKING_URL_PLACEHOLDER
+  if(!/^https:\/\//.test(BOOKING_URL))return;
+  document.getElementById("book-btn").href=BOOKING_URL;
+  document.getElementById("book-wrap").hidden=false;
+})();
+</script>
 </body>
 </html>
