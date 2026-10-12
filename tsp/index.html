@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free TSP Retirement Options Guide | Money Understood</title>
-<meta name="description" content="Plain-English guide to your TSP choices when you leave federal service: keep it, roll it over, or take distributions. Educational only.">
+<title>Free TSP &amp; 401(k) Rollover Options Guide | Money Understood</title>
+<meta name="description" content="Plain-English guide to your choices for a TSP or 401(k) from a previous employer: leave it, roll it over, or cash out. Educational only.">
 <meta name="robots" content="noindex,nofollow">
 <!-- Money Understood funnel: tsp. Live. -->
 <style>
@@ -60,17 +60,28 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
 <body>
 <header class="top"><div class="wrap"><div class="brand">Money <span>Understood</span> &middot; Real money. No BS.</div></div></header>
 <section class="hero"><div class="wrap">
-  <span class="kicker">Free guide &middot; Federal employees</span>
-  <h1>Leaving federal service? <span class="hl">Know your TSP options</span> before you choose.</h1>
-  <p class="sub">Keep it, roll it, or take distributions. Get the free <strong>TSP Retirement Options</strong> guide, in plain English.</p>
+  <span class="kicker">Free guide &middot; TSP &amp; 401(k)</span>
+  <h1>Have a TSP or 401(k) from a previous employer? <span class="hl">Know your rollover options</span> before you choose.</h1>
+  <p class="sub">Whether you left federal service or a private-sector job, get the free <strong>TSP &amp; 401(k) Rollover Options</strong> guide, in plain English.</p>
   <ul class="benefits">
-    <li>The main choices side by side: keep it in the TSP, roll it over, or take withdrawals</li>
+    <li>The main choices side by side: leave it, roll it to a new plan or an IRA, or cash out</li>
     <li>Tax considerations explained in general terms, with no jargon</li>
     <li>The questions to ask before anyone moves your money</li>
   </ul>
 </div></section>
 <div class="wrap">
-  <div class="formcard">
+  <section class="options" style="padding:34px 0 18px">
+    <h2 style="font-size:24px;font-weight:900;margin:0 0 6px">You have 4 options</h2>
+    <p style="margin:0 0 10px;color:var(--muted)">For a TSP or 401(k) left with a previous employer, the general choices are:</p>
+    <ol class="steps">
+      <li><strong>Leave it where it is.</strong> Many plans let you keep your balance in the plan after you leave, subject to plan rules.</li>
+      <li><strong>Roll it into your new employer's plan.</strong> If your new plan accepts roll-ins, this can keep your savings in one place.</li>
+      <li><strong>Roll it into an IRA.</strong> An IRA may offer different investment choices, fees, and rules than an employer plan.</li>
+      <li><strong>Cash it out.</strong> Withdrawals are generally taxed as income, and if you are under 59&frac12; you may owe a 10% early withdrawal penalty unless an exception applies.</li>
+    </ol>
+    <p style="font-size:13px;color:var(--muted);margin:6px 0 0">Each option has trade-offs in fees, investment choices, taxes, and protections. This is general education, not a recommendation, and no outcome is guaranteed.</p>
+  </section>
+  <div class="formcard" style="margin-top:10px">
     <h2>Request your free guide</h2>
     <p class="note">Free guide, no obligation. Educational only.</p>
     <form id="leadform">
@@ -86,6 +97,32 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
           <option value="CA">California</option>
           </select>
           <small style="display:block;margin-top:6px">Currently available to California residents only. More states coming soon.</small>
+          <label for="account_type">Account type</label>
+          <select id="account_type" name="account_type" required>
+          <option value="">Select one</option>
+          <option value="TSP">TSP</option>
+          <option value="401k">401(k)</option>
+          <option value="Both">Both</option>
+          <option value="Other-employer-plan">Other employer plan</option>
+          </select>
+          <label for="balance_range">Approximate balance</label>
+          <select id="balance_range" name="balance_range">
+          <option value="">Select a range</option>
+          <option value="under-25k">Under $25,000</option>
+          <option value="25k-50k">$25,000 to $50,000</option>
+          <option value="50k-100k">$50,000 to $100,000</option>
+          <option value="100k-250k">$100,000 to $250,000</option>
+          <option value="250k-500k">$250,000 to $500,000</option>
+          <option value="500k+">More than $500,000</option>
+          <option value="prefer-not">Prefer not to say</option>
+          </select>
+          <label for="left_employer">Have you left that employer?</label>
+          <select id="left_employer" name="left_employer" required>
+          <option value="">Select one</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Retiring-soon">Retiring soon</option>
+          </select>
           <label for="years_to_retirement">Years to retirement</label>
           <select id="years_to_retirement" name="years_to_retirement" required>
           <option value="">Select one</option>
@@ -96,9 +133,11 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
           <option value="6-10">6 to 10 years</option>
           <option value="10+">More than 10 years</option>
           </select>
-          <label for="agency">Agency</label>
+          <label for="agency">Employer type / agency</label>
           <select id="agency" name="agency" required>
-          <option value="">Select your agency</option>
+          <option value="">Select one</option>
+          <option value="Private-employer">Private-sector employer (401(k))</option>
+          <option value="State-local-gov">State or local government</option>
           <option value="DoD-civilian">Department of Defense (civilian)</option>
           <option value="Uniformed-services">Uniformed services (military member)</option>
           <option value="VA">Department of Veterans Affairs</option>
@@ -124,6 +163,7 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
           <option value="Prefer-not">Prefer not to say</option>
           </select>
           <input type="hidden" name="lead_offer" value="tsp">
+          <input type="hidden" name="lead_variant" value="tsp-401k-v1">
           <input type="hidden" name="lead_source" value="money_understood_tsp_landing">
           <input type="hidden" name="utm_source" value="">
           <input type="hidden" name="utm_medium" value="">
@@ -137,17 +177,18 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
           <input type="hidden" name="consent_timestamp" value="">
           <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
           <label class="consent"><input type="checkbox" name="tcpa_consent" value="yes" required>
-          <span>By checking this box and submitting, I agree that Kevin Krause, a licensed agent, may contact me about TSP rollover options at the phone number and email I provided, including by call or text using automated technology. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</span></label>
-          <input type="hidden" name="consent_text_version" value="tsp-consent-v2-kevin-krause">
+          <span>By checking this box and submitting, I agree that Kevin Krause, a licensed agent, may contact me about TSP and 401(k) rollover options at the phone number and email I provided, including by call or text using automated technology. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</span></label>
+          <input type="hidden" name="consent_text_version" value="tsp-401k-consent-v3-kevin-krause">
           <button type="submit">Send me the free guide</button>
-          <p class="fine">Not affiliated with the federal government or the Thrift Savings Plan. Free guide, no obligation.</p>
+          <p class="fine">Not affiliated with the federal government, the Thrift Savings Plan, or any employer plan. Free guide, no obligation.</p>
     </form>
   </div>
   <section class="faq">
     <h2>Quick answers</h2>
       <details><summary>Is this from the TSP or the government?</summary><p>No. Money Understood is an independent education channel. It is not affiliated with, endorsed by, or connected to the federal government, the Office of Personnel Management, the Federal Retirement Thrift Investment Board, or the Thrift Savings Plan.</p></details>
-      <details><summary>What is in the free guide?</summary><p>A plain-English walkthrough of the main choices for a TSP balance when you leave federal service: keep it in the TSP, roll it to an IRA, roll it to another employer plan such as a 401(k), or take money out through single withdrawals, installments, or an annuity. It also covers tax considerations in general terms and a list of questions to ask before you decide.</p></details>
-      <details><summary>Do I have to move my TSP?</summary><p>No. Leaving your money in the TSP is one of the options, and the guide covers it alongside the others. Nobody should pressure you to move it.</p></details>
+      <details><summary>Does this cover 401(k)s too?</summary><p>Yes. The general choices for a 401(k) from a previous employer are similar: leave it, roll it into a new employer plan, roll it into an IRA, or cash out. Plan rules vary, so check yours.</p></details>
+      <details><summary>What is in the free guide?</summary><p>A plain-English walkthrough of the main choices for a TSP balance when you leave federal service (most also apply to a 401(k)): keep it in the TSP, roll it to an IRA, roll it to another employer plan such as a 401(k), or take money out through single withdrawals, installments, or an annuity. It also covers tax considerations in general terms and a list of questions to ask before you decide.</p></details>
+      <details><summary>Do I have to move my TSP or 401(k)?</summary><p>No. Leaving your money in your old plan is often one of the options, depending on plan rules, and the guide covers it alongside the others. Nobody should pressure you to move it.</p></details>
       <details><summary>Will someone call me?</summary><p>Requesting the guide may lead to contact by a licensed professional about your request. You are never obligated to buy anything, and you can ask to stop being contacted at any time.</p></details>
       <details><summary>Is this tax advice?</summary><p>No. The guide describes general tax rules only. Tax results depend on your situation. Check with a tax professional and the official TSP and IRS resources before you act.</p></details>
   </section>
@@ -175,7 +216,7 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
     if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent="Sending...";}
     var d=new URLSearchParams();
     d.set("offer",OFFER);
-    ["first_name","last_name","email","phone","state","years_to_retirement","age_range","agency","coverage_interest"].forEach(function(n){d.set(n,v(n));});
+    ["first_name","last_name","email","phone","state","years_to_retirement","age_range","agency","coverage_interest","account_type","balance_range","left_employer","lead_variant"].forEach(function(n){d.set(n,v(n));});
     d.set("consent","yes "+new Date().toISOString());
     d.set("consent_text_version",v("consent_text_version"));
     d.set("utm_source",(p.get("utm_source")||"").slice(0,120));
