@@ -210,8 +210,11 @@ footer.bot{background:var(--navy);color:#C9D3E2;font-size:12px;padding:16px 0;te
     d.set("offer",OFFER);
     ["first_name","last_name","email","phone","state","years_to_retirement","age_range","agency","coverage_interest"].forEach(function(n){d.set(n,v(n));});
     d.set("consent","yes "+new Date().toISOString());
+    d.set("consent_text_version",v("consent_text_version"));
     d.set("utm_source",(p.get("utm_source")||"").slice(0,120));
     d.set("sub_id",(p.get("utm_campaign")||"").slice(0,120));
+    ["utm_medium","utm_content","utm_term"].forEach(function(k){d.set(k,(p.get(k)||"").slice(0,120));});
+    d.set("landing_url",location.href.slice(0,500));
     d.set("website",v("website"));
     fetch(ENDPOINT,{method:"POST",mode:"no-cors",body:d}).then(function(){
       window.location.href="thank-you.html";
